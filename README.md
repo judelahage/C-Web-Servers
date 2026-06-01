@@ -24,20 +24,14 @@ HTTP web servers written from scratch in C using the **Windows Sockets (Winsock2
 
 ## Building
 
-A build script is included for compilation with GCC (MSYS2 UCRT64):
-
-```bat
-run.bat
-```
-
-This compiles `ThreadPooledServer.c` and `route.c`, links against `-lws2_32`, and launches the server on **port 8080**.
-
-To compile manually:
+Compile with GCC (MSYS2 UCRT64), linking against Winsock2:
 
 ```bash
 gcc ThreadPooledServer.c route.c -o ThreadPooledServer.exe -lws2_32
 gcc MultiThreadedServer.c route.c -o MultiThreadedServer.exe -lws2_32
 ```
+
+Both servers listen on **port 8080**.
 
 ## Tech Stack
 
